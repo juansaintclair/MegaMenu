@@ -27,10 +27,13 @@ $('.dropdown-toggle').click(function () {
 
 // jQuery-menu-aim: <meaningful part of the example>
 // Hook up events to be fired on menu row activation.
-$menu.menuAim({
+var config = {
   activate: activateSubmenu,
   deactivate: deactivateSubmenu
-});
+};
+
+$menu.menuAim(config);
+$('#submenuAtendimento').menuAim(config);
 // jQuery-menu-aim: </meaningful part of the example>
 
 // jQuery-menu-aim: the following JS is used to show and hide the submenu

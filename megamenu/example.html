@@ -1,290 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- jQuery-menu-aim: this example uses Twitter's Bootstrap (http://twitter.github.com/bootstrap) to setup a clean example
+    
+    <head>
+        <!-- jQuery-menu-aim: this example uses Twitter's Bootstrap (http://twitter.github.com/bootstrap) to setup a clean example
         page. Search for "jQuery-menu-aim" in this page to find the jQuery-menu-aim integration examples. -->
-    <meta charset="utf-8">
-    <title>jQuery-menu-aim example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 60px;
-            /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <!-- jQuery-menu-aim: the following styles are used to customize bootstrap's dropdowns and popover to play a little nicer
+        <meta charset="utf-8">
+        <title>jQuery-menu-aim example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <style>
+            body {
+                padding-top: 60px;
+                /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- jQuery-menu-aim: the following styles are used to customize bootstrap's dropdowns and popover to play a little nicer
         w/ this example. They are personal choices and not necessary for your use of jQuery-menu-aim. jQuery-menu-aim is HTML/style-agnostic,
         it simply fires events when menu items should be activated. You can choose to do whatever you want w/ those events. -->
-    <style>
-        .navbar .popover {
-            -webkit-border-top-left-radius: 0px;
-            -webkit-border-bottom-left-radius: 0px;
-            border-top-left-radius: 0px;
-            border-bottom-left-radius: 0px;
-            overflow: hidden;
-            border-radius: 0;
-        }
-        
-        .navbar .popover-content {
-            text-align: center;
-        }
-        
-        .navbar .popover-content img {
-            height: 212px;
-            max-width: 250px;
-        }
-        
-        .navbar .dropdown-menu {
-            -webkit-border-top-right-radius: 0px;
-            -webkit-border-bottom-right-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
-            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .navbar .dropdown-menu > li > a:hover {
-            background-image: none;
-            color: white;
-            background-color: rgb(0, 129, 194);
-            background-color: rgba(0, 129, 194, 0.5);
-        }
-        
-        .navbar .dropdown-menu > li > a.maintainHover {
-            color: white;
-            background-color: #0081C2;
-        }
-        
-        .ultima-coluna {
-            position: absolute;
-            display: none;
-            /*margin-left: 435px;*/
+        <style>
+            .navbar .popover {
+                -webkit-border-top-left-radius: 0px;
+                -webkit-border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                overflow: hidden;
+                border-radius: 0;
+            }
             
-            margin-top: -1px;
-            background-color: #FFF;
-            border: 1px solid #ccc;
-            z-index: 1300;
-            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            height: 320px;
-        }
-        
-        .nova-coluna {
-            position: absolute;
-            display: none;
-            /*margin-left: 435px;*/
+            .navbar .popover-content {
+                text-align: center;
+            }
             
-            margin-top: -1px;
-            background-color: #FFF;
-            border: 1px solid #ccc;
-            z-index: 1200;
-            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            height: 320px;
-        }
-        
-        .noshadow {
-            box-shadow: 10px 0 25px -0 rgba(0, 0, 0, 0.2), 10px 0 25px 0 rgba(0, 0, 0, 0.2);
-        }
-    </style>
-    <!--[if lt IE 9]>
+            .navbar .popover-content img {
+                height: 212px;
+                max-width: 250px;
+            }
+            
+            .navbar .dropdown-menu {
+                -webkit-border-top-right-radius: 0px;
+                -webkit-border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            .navbar .dropdown-menu > li > a:hover {
+                background-image: none;
+                color: white;
+                background-color: rgb(0, 129, 194);
+                background-color: rgba(0, 129, 194, 0.5);
+            }
+            
+            .navbar .dropdown-menu > li > a.maintainHover {
+                color: white;
+                background-color: #0081C2;
+            }
+            
+            .ultima-coluna {
+                position: absolute;
+                display: none;
+                /*margin-left: 435px;*/
+                
+                margin-top: -1px;
+                background-color: #FFF;
+                border: 1px solid #ccc;
+                z-index: 1300;
+                -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                height: 320px;
+            }
+            
+            .nova-coluna {
+                position: absolute;
+                display: none;
+                /*margin-left: 435px;*/
+                
+                margin-top: -1px;
+                background-color: #FFF;
+                border: 1px solid #ccc;
+                z-index: 1200;
+                -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                height: 320px;
+            }
+            
+            .noshadow {
+                box-shadow: 10px 0 25px -0 rgba(0, 0, 0, 0.2), 10px 0 25px 0 rgba(0, 0, 0, 0.2);
+            }
+        </style>
+        <!--[if lt IE 9]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
-</head>
-
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="brand" href="#">A dropdown example</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="active">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Explore the Monkeys</a>
-                            <!-- jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+    </head>
+    
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">A dropdown example</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Explore the Monkeys</a>
+                                <!-- jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
                   This is just one of many possible examples for defining the menu's HTML.
                   jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
                   be used as you please.
                 -->
-
-                            <ul class="dropdown-menu" role="menu">
-
-                                <div id="submenu" class="ultima-coluna popover">
-                                    <h3 class="popover-title">Imagem Estática</h3>
-                                    <div class="popover-content">
-                                        <img src="img/patas.png">
-                                    </div>
-                                </div>
-
-                                <div class="nova-coluna" class="popover" style="display:none;">
-                                    lalalal
-                                </div>
-
-
-                                <li data-submenu-id="submenu-patas">
-                                    <a href="#">Página Inicial</a>
-                                    <!-- jQuery-menu-aim: each class="popover" div defines submenu content. There are a million and one ways to do this, places
-                                        to structure the HTML, etc. This is just one example. jQuery-menu-aim is agnostic to your HTML structure, it only fires events
-                                        to be used as you please. -->
-                                    <div id="submenu-patas" class="popover noshadow">
-                                        <h3 class="popover-title">Página Inicial</h3>
+                                <ul class="dropdown-menu" role="menu">
+                                    <div id="submenu" class="ultima-coluna popover">
+                                        <h3 class="popover-title">Imagem Estática</h3>
                                         <div class="popover-content">
                                             <img src="img/patas.png">
                                         </div>
                                     </div>
-                                </li>
-
-
-                                <li data-submenu-id="submenu-aplicativos">
-                                    <a href="#">Aplicativos ></a>
-                                    <div id="submenu-aplicativos" class="popover noshadow">
-                                        <h3 class="popover-title">Golden Snub-Nosed</h3>
-                                        <div style="min-width:400px;padding:20px;">
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="#">Atendimento</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Atendimento</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Atendimento</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Atendimento</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Atendimento ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Atendimento</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Atendimento</a>
-                                                </li>
-                                            </ul>
+                                    <div class="nova-coluna" class="popover" style="display:none;">lalalal</div>
+                                    <li data-submenu-id="submenu-patas">
+                                        <a href="#">Página Inicial</a>
+                                        <!-- jQuery-menu-aim: each class="popover" div defines submenu content. There are a million and one ways to do this, places
+                                        to structure the HTML, etc. This is just one example. jQuery-menu-aim is agnostic to your HTML structure, it only fires events
+                                        to be used as you please. -->
+                                        <div id="submenu-patas" class="popover noshadow">
+                                            <h3 class="popover-title">Página Inicial</h3>
+                                            <div class="popover-content">
+                                                <img src="img/patas.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-
-
-
-                                <li data-submenu-id="submenu-duoc-langur">
-                                    <a href="#">Atendimento</a>
-                                    <div id="submenu-duoc-langur" class="popover noshadow">
-                                        <h3 class="popover-title">Duoc Langur</h3>
-                                        <div class="popover-content">
-                                            <img src="img/duoc-langur.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-aplicativos">
+                                        <a href="#">Aplicativos ></a>
+                                        <div id="submenu-aplicativos" class="popover noshadow">
+                                            <h3 class="popover-title">Golden Snub-Nosed</h3>
+                                            <div style="min-width:400px;padding:20px;">
+                                                <ul class="submenu" id="submenu-atendimentos">
+                                                    <li>
+                                                        <a href="#">Atendimento</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Atendimento</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Atendimento</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Atendimento</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Atendimento ></a>
+                                                        <div  class="popover noshadow">
+                                                            <h3 class="popover-title">Golden Snub-Nosed</h3>
+                                                            <div style="min-width:400px;padding:20px;">
+                                                                <ul class="submenu" id="submenuAtendimento">
+                                                                    <li>
+                                                                        <a href="#">Atendimento</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Atendimento</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Atendimento</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Atendimento</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Atendimento ></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Atendimento</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#">Atendimento</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Atendimento</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Atendimento</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-pygmy">
-                                    <a href="#">Projetos</a>
-                                    <div id="submenu-pygmy" class="popover noshadow">
-                                        <h3 class="popover-title">Baby Pygmy Marmoset</h3>
-                                        <div class="popover-content">
-                                            <img src="img/pygmy.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-duoc-langur">
+                                        <a href="#">Atendimento</a>
+                                        <div id="submenu-duoc-langur" class="popover noshadow">
+                                            <h3 class="popover-title">Duoc Langur</h3>
+                                            <div class="popover-content">
+                                                <img src="img/duoc-langur.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-tamarin">
-                                    <a href="#">Calendário</a>
-                                    <div id="submenu-tamarin" class="popover noshadow">
-                                        <h3 class="popover-title">Black Lion Tamarin</h3>
-                                        <div class="popover-content">
-                                            <img src="img/tamarin.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-pygmy">
+                                        <a href="#">Projetos</a>
+                                        <div id="submenu-pygmy" class="popover noshadow">
+                                            <h3 class="popover-title">Baby Pygmy Marmoset</h3>
+                                            <div class="popover-content">
+                                                <img src="img/pygmy.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-monk">
-                                    <a href="#">Clientes</a>
-                                    <div id="submenu-monk" class="popover noshadow">
-                                        <h3 class="popover-title">Monk Saki</h3>
-                                        <div class="popover-content">
-                                            <img src="img/monk.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-tamarin">
+                                        <a href="#">Calendário</a>
+                                        <div id="submenu-tamarin" class="popover noshadow">
+                                            <h3 class="popover-title">Black Lion Tamarin</h3>
+                                            <div class="popover-content">
+                                                <img src="img/tamarin.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-gabon">
-                                    <a href="#">Comercial</a>
-                                    <div id="submenu-gabon" class="popover noshadow">
-                                        <h3 class="popover-title">Gabon</h3>
-                                        <div class="popover-content">
-                                            <img src="img/gabon.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-monk">
+                                        <a href="#">Clientes</a>
+                                        <div id="submenu-monk" class="popover noshadow">
+                                            <h3 class="popover-title">Monk Saki</h3>
+                                            <div class="popover-content">
+                                                <img src="img/monk.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-grivet">
-                                    <a href="#">Faturamento</a>
-                                    <div id="submenu-grivet" class="popover noshadow">
-                                        <h3 class="popover-title">Grivet</h3>
-                                        <div class="popover-content">
-                                            <img src="img/grivet.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-gabon">
+                                        <a href="#">Comercial</a>
+                                        <div id="submenu-gabon" class="popover noshadow">
+                                            <h3 class="popover-title">Gabon</h3>
+                                            <div class="popover-content">
+                                                <img src="img/gabon.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-red-leaf">
-                                    <a href="#">Documentos</a>
-                                    <div id="submenu-red-leaf" class="popover noshadow">
-                                        <h3 class="popover-title">Red Leaf</h3>
-                                        <div class="popover-content">
-                                            <img src="img/red-leaf.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-grivet">
+                                        <a href="#">Faturamento</a>
+                                        <div id="submenu-grivet" class="popover noshadow">
+                                            <h3 class="popover-title">Grivet</h3>
+                                            <div class="popover-content">
+                                                <img src="img/grivet.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-king-colobus">
-                                    <a href="#">Iterface</a>
-                                    <div id="submenu-king-colobus" class="popover noshadow">
-                                        <h3 class="popover-title">King Colobus</h3>
-                                        <div class="popover-content">
-                                            <img src="img/colobus.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-red-leaf">
+                                        <a href="#">Documentos</a>
+                                        <div id="submenu-red-leaf" class="popover noshadow">
+                                            <h3 class="popover-title">Red Leaf</h3>
+                                            <div class="popover-content">
+                                                <img src="img/red-leaf.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-king-colobus">
-                                    <a href="#">Suporte</a>
-                                    <div id="submenu-king-colobus" class="popover noshadow">
-                                        <h3 class="popover-title">King Colobus</h3>
-                                        <div class="popover-content">
-                                            <img src="img/colobus.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-king-colobus">
+                                        <a href="#">Iterface</a>
+                                        <div id="submenu-king-colobus" class="popover noshadow">
+                                            <h3 class="popover-title">King Colobus</h3>
+                                            <div class="popover-content">
+                                                <img src="img/colobus.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li data-submenu-id="submenu-king-colobus">
-                                    <a href="#">Administração</a>
-                                    <div id="submenu-king-colobus" class="popover noshadow">
-                                        <h3 class="popover-title">King Colobus</h3>
-                                        <div class="popover-content">
-                                            <img src="img/colobus.png">
+                                    </li>
+                                    <li data-submenu-id="submenu-king-colobus">
+                                        <a href="#">Suporte</a>
+                                        <div id="submenu-king-colobus" class="popover noshadow">
+                                            <h3 class="popover-title">King Colobus</h3>
+                                            <div class="popover-content">
+                                                <img src="img/colobus.png">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-
+                                    </li>
+                                    <li data-submenu-id="submenu-king-colobus">
+                                        <a href="#">Administração</a>
+                                        <div id="submenu-king-colobus" class="popover noshadow">
+                                            <h3 class="popover-title">King Colobus</h3>
+                                            <div class="popover-content">
+                                                <img src="img/colobus.png">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/jquery.menu-aim.js"></script>
-    <script src="js/bootstrap.min.js" ></script>
-    <script src="js/menu.js"></script>
-</body>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.menu-aim.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
 
 </html>
