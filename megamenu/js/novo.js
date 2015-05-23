@@ -8,30 +8,26 @@ $(function () {
 	$('.pai')
 		.on('mouseenter', function () {
 		ocultaFilhos();
-		getLargura($(this));
+		exibeHierarquia($(this));
 	});
-	$('.menu').on('mouseleave', function () {
-		ocultaFilhos();
-	});
+	//	$('.menu').on('mouseleave', function () {
+	//		ocultaFilhos();
+	//	});
 });
 
 function ocultaFilhos() {
 	$('.filho').hide().css('margin-left', '');
 }
 
-function getLargura($item) {
+function exibeHierarquia($item) {
 	var largura = $item.width();
 	var pai = $item.data('pai');
 
 	if ($item.hasClass('filho')) {
-		largura += getLargura($('[data-nome="' + pai + '"]'));
+		largura += exibeHierarquia($('[data-nome="' + pai + '"]'));
 	}
 
-	var $seletor = pai
-		? $item
-		: $('.filho[data-pai="' + $item.data('nome') + '"]');
-
-	$seletor
+	$('.filho[data-pai="' + $item.data('nome') + '"]')
 		.show()
 		.css({
 		marginLeft: largura
