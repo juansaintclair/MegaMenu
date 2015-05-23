@@ -5,14 +5,12 @@ var config = {
 };
 
 $(function () {
-	$('.pai').on('mouseenter', function () {
+	$('.pai')
+		.on('mouseenter', function () {
 		getLargura($(this));
-	})
-		.on('mouseleave', function () {
-		setTimeout(function () {
-			$('.filho').hide().css('margin-left', '');
-		}, 1000);
-
+	});
+	$('.menu').on('mouseleave', function () {
+		$('.filho').hide().css('margin-left', '');
 	});
 });
 
@@ -24,12 +22,13 @@ function getLargura($item) {
 		largura += getLargura($('[data-nome="' + pai + '"]'));
 	}
 
-	var seletor = pai ? '[data-pai="' + pai + '"]' : '.filho'; 
+	var $seletor = pai
+		? $item//$('[data-nome="' + pai + '"]')
+		: $('.filho[data-pai="' + $item.data('nome') + '"]');
 
-	$(seletor)
-		.children($item)
+	$seletor
 		.show()
-		.animate({
+		.css({
 		marginLeft: largura
 	});
 
