@@ -8,7 +8,7 @@
 				position:absolute;
 				width:100%;
 			}
-			
+
 			.menu > div:not(.patriarca){
 				position:relative;
 				top: 0;
@@ -31,9 +31,15 @@
 		<div class="menu">
 			<div class="pai patriarca" data-nome="item1">Item 1</div>
 			<div class="pai patriarca" data-nome="item2">Item 2</div>
+				
+			<div class="estrutura">
 			<div class="filho pai" data-pai="item1" data-nome="filho1">Filho do item 1</div>
 			<div class="filho" data-pai="item1" data-nome="filho12">Filho 2 do item 1</div>
+				
+			</div>
+				
 			<div class="filho" data-pai="item2">Filho do item 2</div>
+				
 			<div class="filho" data-pai="filho1">Neto</div>
 			<div class="filho" data-pai="filho1">Neto 2</div>
 		</div>

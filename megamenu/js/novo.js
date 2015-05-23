@@ -6,13 +6,22 @@ var config = {
 
 $(function () {
 	$('.pai')
-		.on('mouseenter', function () {
+		.mouseenter(function () {
 		ocultaFilhos();
 		exibeHierarquia($(this));
-	});
-		$('.menu').on('mouseleave', function () {
-			ocultaFilhos();
+
 		});
+	
+	$('.pai, .filho').mouseenter(function () {
+		$(this).css({ 'backgroundColor': 'aqua' });
+	})
+		.mouseleave(function () {
+		$(this).css({ 'backgroundColor': '' });
+	});
+	
+	$('.menu').mouseleave(function () {
+		ocultaFilhos();
+	});
 });
 
 function ocultaFilhos() {
