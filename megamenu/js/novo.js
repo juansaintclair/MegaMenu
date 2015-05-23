@@ -7,6 +7,17 @@ var config = {
 };
 
 $(function () {
+	$('.pai').on('mouseenter', function () {
+		var nomePai = $(this).data('nome');
+		$('.filho[data-pai="' + nomePai + '"]').slideDown();
+	})
+		.on('mouseleave', function () {
+		$('.filho').slideUp();
+	});
+});
+
+/*
+$(function () {
 	$('.'+config.classParent+' > li').on('mouseenter', function () {
 		var $filhos = $(this).children('.' + config.classChild);
 		$filhos.slideDown();
@@ -15,3 +26,4 @@ $(function () {
 		$('.' + config.classChild).slideUp();
 	});
 });
+*/
