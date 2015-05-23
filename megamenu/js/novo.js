@@ -10,9 +10,9 @@ $(function () {
 		ocultaFilhos();
 		exibeHierarquia($(this));
 	});
-	//	$('.menu').on('mouseleave', function () {
-	//		ocultaFilhos();
-	//	});
+		$('.menu').on('mouseleave', function () {
+			ocultaFilhos();
+		});
 });
 
 function ocultaFilhos() {
