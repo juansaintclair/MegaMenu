@@ -7,12 +7,17 @@ var config = {
 $(function () {
 	$('.pai')
 		.on('mouseenter', function () {
+		ocultaFilhos();
 		getLargura($(this));
 	});
 	$('.menu').on('mouseleave', function () {
-		$('.filho').hide().css('margin-left', '');
+		ocultaFilhos();
 	});
 });
+
+function ocultaFilhos() {
+	$('.filho').hide().css('margin-left', '');
+}
 
 function getLargura($item) {
 	var largura = $item.width();
@@ -23,7 +28,7 @@ function getLargura($item) {
 	}
 
 	var $seletor = pai
-		? $item//$('[data-nome="' + pai + '"]')
+		? $item
 		: $('.filho[data-pai="' + $item.data('nome') + '"]');
 
 	$seletor
