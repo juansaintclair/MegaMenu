@@ -1,11 +1,17 @@
 /* global $ */
+//$('#menu').pluginManeiro({classChild: 'filho', classParent:pai});
+
+var config = {
+	classChild: 'filho',
+	classParent: 'pai'
+};
 
 $(function () {
-	$('.pai > li').on('mouseenter', function () {
-		var $filhos = $(this).children('.filho');
+	$('.'+config.classParent+' > li').on('mouseenter', function () {
+		var $filhos = $(this).children('.' + config.classChild);
 		$filhos.slideDown();
 	})
 	.on('mouseleave', function () {
-		$('.filho').slideUp();
+		$('.' + config.classChild).slideUp();
 	});
 });
