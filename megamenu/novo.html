@@ -4,8 +4,23 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
+			.menu{
+				position:absolute;
+			}
+			
+			.menu > div:not(.patriarca){
+				position:absolute;
+				top: 0;
+			}
+			
 			.filho{
 				display: none;
+			}
+			
+			.pai, .filho{
+				width:300px;
+				background-color: gray;
+				height: 50px;
 			}
 			
 		</style>
@@ -15,56 +30,20 @@
 	<body>
 		
 		<div class="menu">
-			<div class="pai" data-nome="item1">
-			Item 1	
+			<div class="pai patriarca" data-nome="item1">
+				Item 1	
 			</div>
-			<div class="pai" data-nome="item2">
-			Item 2	
+			<div class="pai patriarca" data-nome="item2">
+				Item 2	
 			</div>
 			
-			<div class="filho" data-pai="item1">Filho do item 1</div>
+			<div class="filho pai" data-pai="item1" data-nome="filho1">Filho do item 1</div>
 			<div class="filho" data-pai="item2">Filho do item 2</div>
-		</div>
-		
-		
-		
-		<!--
-		
-		<div class="menu">
-			<ul class="pai">
-				<li>Menu 1
-					<ul class="filho pai">
-						<li>Sub 1.1
-							<ul class="filho pai">
-								<li>Sub sub 1.1.1
-									<ul class="filho">
-										<li>Conteúdo</li>
-									</ul>
-								</li>
-								<li>Sub sub 1.1.2</li>
-							</ul>
-						</li>
-						<li>Sub 1.2</li>
-						<li>Sub 1.3</li>
-					</ul>
-				</li>
-				<li>Menu 2
-					<ul class="filho">
-						<li>Sub 2.1</li>
-						<li>Sub 2.2</li>
-						<li>Sub 2.3</li>
-					</ul>
-				</li>
-				<li>Menu 3
-					<ul class="filho">
-						<li>Sub 3.1</li>
-						<li>Sub 3.2</li>
-						<li>Sub 3.3</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		-->
+				
+			<div class="filho" data-pai="filho1">
+				Neto
+			</div>
+			</div>
 	</body>
 
 </html>

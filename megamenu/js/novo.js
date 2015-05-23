@@ -1,29 +1,31 @@
 /* global $ */
-//$('#menu').pluginManeiro({classChild: 'filho', classParent:pai});
 
 var config = {
-	classChild: 'filho',
-	classParent: 'pai'
+	objConstante: '.constante'
 };
 
 $(function () {
 	$('.pai').on('mouseenter', function () {
 		var nomePai = $(this).data('nome');
-		$('.filho[data-pai="' + nomePai + '"]').slideDown();
+		var larguraPai = getLargura($(this));
+
+		$('.filho[data-pai="' + nomePai + '"]').show().animate({ marginLeft: larguraPai });
 	})
 		.on('mouseleave', function () {
-		$('.filho').slideUp();
+		setTimeout(function () {
+			$('.filho').hide().css('margin-left', '');
+		}, 10000);
+
 	});
 });
 
-/*
-$(function () {
-	$('.'+config.classParent+' > li').on('mouseenter', function () {
-		var $filhos = $(this).children('.' + config.classChild);
-		$filhos.slideDown();
-	})
-	.on('mouseleave', function () {
-		$('.' + config.classChild).slideUp();
-	});
-});
-*/
+function getLargura($item) {
+	var largura = $item.width();
+	
+	if ($item.hasClass('filho')) {
+		var pai = $item.data('pai');
+		largura += getLargura($('.' + pai));
+	}
+	
+	return largura;
+}
