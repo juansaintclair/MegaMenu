@@ -1,8 +1,8 @@
 /* global $ */
 
 $(function () {
-	$('.pai li').on('mouseenter', function () {
-		var $filhos = $('.filho', this);
+	$('.pai > li').on('mouseenter', function () {
+		var $filhos = $(this).children('.filho');
 		$filhos.slideDown();
 	})
 	.on('mouseleave', function () {
