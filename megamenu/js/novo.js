@@ -11,14 +11,6 @@ $(function () {
 		exibeHierarquia($(this));
 
 		});
-	
-	$('.pai, .filho').mouseenter(function () {
-		$(this).css({ 'backgroundColor': 'aqua' });
-	})
-		.mouseleave(function () {
-		$(this).css({ 'backgroundColor': '' });
-	});
-	
 	$('.menu').mouseleave(function () {
 		ocultaFilhos();
 	});
