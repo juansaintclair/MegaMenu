@@ -21,11 +21,11 @@ $(function () {
 
 function getLargura($item) {
 	var largura = $item.width();
-	
+
 	if ($item.hasClass('filho')) {
 		var pai = $item.data('pai');
-		largura += getLargura($('.' + pai));
+		largura += getLargura($('[data-nome="' + pai + '"]'));
 	}
-	
+
 	return largura;
 }
