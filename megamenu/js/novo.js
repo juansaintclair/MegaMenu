@@ -1,10 +1,11 @@
 /* global $ */
 
 $(function () {
-		$('.pai').on('mouseenter', function () {
-			$('.filho', this).slideDown();
-		})
-		.on('mouseleave', function () {
-			$('.filho').slideUp();
-		});
+	$('.pai li').on('mouseenter', function () {
+		var $filhos = $('.filho', this);
+		$filhos.slideDown();
+	})
+	.on('mouseleave', function () {
+		$('.filho').slideUp();
+	});
 });
