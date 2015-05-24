@@ -12,9 +12,9 @@ $(function () {
 
 	});
 
-	$('.filho').mouseleave(function () {
-		$('.filho').not($(this).siblings()).not(this).hide().parents('.top').css('margin-left', '');
-	});
+//	$('.filho').not('.pai').mouseleave(function () {
+//		$('.filho').not($(this).siblings()).not(this).hide().parents('.top').css('margin-left', '');
+//	});
 
 	$('.menu').mouseleave(function () {
 		ocultaFilhos();
