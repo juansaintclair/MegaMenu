@@ -18,7 +18,7 @@ $(function () {
 
 function ocultaFilhos() {
 	$('.filho').hide().parents('.top').css('margin-left', '');
-	$('.fixo').hide().css({ marginLeft: '350px' });
+	$('.fixo').hide().css({ marginLeft: '220px' });
 }
 
 function exibeHierarquia($item) {
