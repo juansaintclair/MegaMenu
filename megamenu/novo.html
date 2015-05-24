@@ -33,11 +33,11 @@
 				border-bottom: 1px solid #e8e8e8;
 			}
 			
-			.pai:last-child,
 			.filho:last-child,
 			.fixo:last-child {
 				border-bottom: none;
 			}
+
 			
 			.pai:hover, .filho:hover{
 				background-color: #14a0f8;
@@ -46,7 +46,7 @@
 			
 			.top{
 				position:absolute;
-				margin-top:-57px;
+				margin-top:-56px;
 				border:1px solid #bababa; 
 			}
 			
@@ -57,8 +57,13 @@
 			nav .fixo{
 				position:absolute;
 				top:0;
-				margin-left:200px;
+				margin-left:250px;
 				display:none;
+				border: 1 px solid #F00;
+			}
+			
+			.ultimaPatriarca {
+				border-bottom: none;
 			}
 		</style>
 		<script src="js/jquery-1.9.1.min.js"></script>
@@ -69,7 +74,7 @@
 			<nav>
 				<div class="menu">
 					<div class="pai patriarca" data-nome="item1">Item 1</div>
-					<div class="pai patriarca" data-nome="item2">Item 2</div>
+					<div class="pai patriarca ultimaPatriarca" data-nome="item2">Item 2</div>
 					<div class="top">
 						<div class="filho pai" data-pai="item1" data-nome="filho1">Filho do item 1</div>
 						<div class="filho" data-pai="item1" data-nome="filho12">Filho 2 do item 1</div>
