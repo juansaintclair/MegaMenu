@@ -5,7 +5,6 @@
 		<title></title>
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<style>
-			
 			body {
 				font-family: 'Lato', sans-serif;
 				font-size: 14px;
@@ -50,32 +49,41 @@
 				margin-top:-57px;
 				border:1px solid #bababa; 
 			}
+			
+			nav{
+				position:absolute;
+			}
+			
+			nav .fixo{
+				position:absolute;
+				top:0;
+				margin-left:200px;
+				display:none;
+			}
 		</style>
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script src="js/novo.js"></script>
 	</head>
 	<body>
 		<div style="margin:50px">
-		
-		<div class="menu">
-			<div class="pai patriarca" data-nome="item1">Item 1</div>
-			<div class="pai patriarca" data-nome="item2">Item 2</div>
-			<div class="top">
-				<div class="filho pai" data-pai="item1" data-nome="filho1">Filho do item 1</div>
-				<div class="filho" data-pai="item1" data-nome="filho12">Filho 2 do item 1</div>
-			</div>
-			<div class="top">
-				<div class="filho" data-pai="item2">Filho do item 2</div>
-			</div>
-			<div class="top">
-				<div class="filho" data-pai="filho1">Neto</div>
-				<div class="filho" data-pai="filho1">Neto 2</div>
-			</div>
-			<div class="fixo">
-				Conteúdo fixo
-			</div>
-		</div>
-		
+			<nav>
+				<div class="menu">
+					<div class="pai patriarca" data-nome="item1">Item 1</div>
+					<div class="pai patriarca" data-nome="item2">Item 2</div>
+					<div class="top">
+						<div class="filho pai" data-pai="item1" data-nome="filho1">Filho do item 1</div>
+						<div class="filho" data-pai="item1" data-nome="filho12">Filho 2 do item 1</div>
+					</div>
+					<div class="top">
+						<div class="filho" data-pai="item2">Filho do item 2</div>
+					</div>
+					<div class="top">
+						<div class="filho" data-pai="filho1">Neto</div>
+						<div class="filho" data-pai="filho1">Neto 2</div>
+					</div>
+				</div>
+				<div class="fixo">Conteúdo fixo</div>
+			</nav>
 		</div>
 	</body>
 

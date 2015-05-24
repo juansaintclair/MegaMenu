@@ -10,7 +10,7 @@ $(function () {
 		ocultaFilhos();
 		exibeHierarquia($(this));
 
-		});
+	});
 	$('.menu').mouseleave(function () {
 		ocultaFilhos();
 	});
@@ -18,6 +18,7 @@ $(function () {
 
 function ocultaFilhos() {
 	$('.filho').hide().parents('.top').css('margin-left', '');
+	$('.fixo').hide().css({ marginLeft: '200px' });
 }
 
 function exibeHierarquia($item) {
@@ -29,13 +30,15 @@ function exibeHierarquia($item) {
 	}
 
 	var top = $('.filho[data-pai="' + $item.data('nome') + '"]');
-	
+
 	top
 		.show()
 		.parents('.top')
 		.css({
 		marginLeft: largura
 	});
+
+	$('.fixo').show().css({ marginLeft: largura + $('.patriarca').width() });
 
 	return largura;
 }
