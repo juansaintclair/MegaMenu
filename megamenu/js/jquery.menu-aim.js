@@ -68,7 +68,6 @@
  *      });
  *
  * https://github.com/kamens/jQuery-menu-aim
- * MIT License
 */
 (function($) {
 
