@@ -11,12 +11,17 @@ $(function () {
 		exibeHierarquia($(this));
 
 	});
+
+	$('.filho').mouseleave(function () {
+		$('.filho').not($(this).siblings()).not(this).hide().parents('.top').css('margin-left', '');
+	});
+
 	$('.menu').mouseleave(function () {
 		ocultaFilhos();
 	});
 });
 
-function ocultaFilhos() {
+function ocultaFilhos(pai) {
 	$('.filho').hide().parents('.top').css('margin-left', '');
 	$('.fixo').hide().css({ marginLeft: '220px' });
 }
