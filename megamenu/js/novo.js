@@ -11,17 +11,23 @@ $(function () {
 		exibeHierarquia($(this));
 
 	});
-
-//	$('.filho').not('.pai').mouseleave(function () {
+	$('.filho').not('.pai').mouseleave(function () {
 //		$('.filho').not($(this).siblings()).not(this).hide().parents('.top').css('margin-left', '');
-//	});
+		var tios = $(this).siblings('.pai').get().map(function (pai) { return $(pai).data('nome'); });
+		
+		for (var i = 0; i < tios.length; i++) {
+			var tio = tios[i];
+			
+			$('[data-pai="' + tio + '"]').hide().parents('.top').css('margin-left', '');
+		}
+	});
 
 	$('.menu').mouseleave(function () {
 		ocultaFilhos();
 	});
 });
 
-function ocultaFilhos(pai) {
+function ocultaFilhos() {
 	$('.filho').hide().parents('.top').css('margin-left', '');
 	$('.fixo').hide().css({ marginLeft: '220px' });
 }
