@@ -17,19 +17,22 @@ $(function () {
 });
 
 function ocultaFilhos() {
-	$('.filho').hide().css('margin-left', '');
+	$('.filho').hide().parents('.top').css('margin-left', '');
 }
 
 function exibeHierarquia($item) {
-	var largura = $item.width();
+	var largura = $item.width() + 10;
 	var pai = $item.data('pai');
 
 	if ($item.hasClass('filho')) {
 		largura += exibeHierarquia($('[data-nome="' + pai + '"]'));
 	}
 
-	$('.filho[data-pai="' + $item.data('nome') + '"]')
+	var top = $('.filho[data-pai="' + $item.data('nome') + '"]');
+	
+	top
 		.show()
+		.parents('.top')
 		.css({
 		marginLeft: largura
 	});
