@@ -348,7 +348,7 @@ header {
   border-top-width: 0;
 }
 .cd-dropdown-content li:last-of-type > a, .cd-dropdown-content ul li:last-of-type > a {
-  border-bottom-width: 1px;
+  /*border-bottom-width: 1px;*/
 }
 .cd-dropdown-content .cd-divider, .cd-dropdown-content ul .cd-divider {
   padding-top: 10px;
@@ -1000,4 +1000,8 @@ header {
 
 .no-js .cd-dropdown-wrapper .cd-close {
   display: none;
+}
+
+.single-column {
+  width: 100%;
 }
