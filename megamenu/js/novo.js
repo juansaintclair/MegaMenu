@@ -58,7 +58,7 @@ function exibeHierarquia($item) {
 		marginLeft: largura
 	});
 
-	$('.fixo').show().css({ marginLeft: largura + $('.patriarca').width() });
+	$('.fixo').show().css({ marginLeft: largura + $('.patriarca').width()+10 });
 
 	return largura;
 }

@@ -13,6 +13,13 @@
 				margin: 0;
 			}
 			
+			a {
+					 -moz-transition: all .2s ease-in;
+				    -o-transition: all .2s ease-in;
+				    -webkit-transition: all .2s ease-in;
+				    transition: all .2s ease-in;
+			}
+			
 			.menu {
 				border-radius: 5px;
 				 -webkit-border-top-right-radius: 0px;
@@ -38,7 +45,11 @@
 			.pai:hover, .filho:hover{
 				background-color: #14a0f8;
 				color: #FFF;
-			}
+				 -moz-transition: all .2s ease-in;
+			    -o-transition: all .2s ease-in;
+			    -webkit-transition: all .2s ease-in;
+			    transition: all .2s ease-in;
+						}
 			
 			.top{
 				position:absolute;
@@ -48,7 +59,6 @@
 				border-left:none;
 				/*display: none;
 				*/
-				overflow: scroll;
 			}
 			
 			
@@ -66,8 +76,22 @@
 				position:absolute;
 				top:0;
 				display:none;
-				border: 1px solid #F00;
+				border:1px solid #bababa; 
+				height: 370px;
+				border-left: none;
 			}
+			
+			.ultimaPatriarca a:link,
+			.ultimaPatriarca a:visited,
+			.ultimaPatriarca a:active {
+				color: #000;
+				text-decoration: none;
+			}
+			.ultimaPatriarca a:hover {
+				color: #FFF;
+				text-decoration: none;
+			}
+			
 		</style>
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.20/jquery-ui.min.js"></script>
