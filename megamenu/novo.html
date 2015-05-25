@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/jquery.scrollable.css" />
+		
 		<style>
 			body {
 				font-family: 'Lato', sans-serif;
@@ -33,11 +35,6 @@
 				border-bottom: 1px solid #e8e8e8;
 			}
 			
-			.filho:last-child {
-				border-bottom: none;
-			}
-
-			
 			.pai:hover, .filho:hover{
 				background-color: #14a0f8;
 				color: #FFF;
@@ -47,7 +44,13 @@
 				position:absolute;
 				margin-top:-381px;
 				border:1px solid #bababa; 
+				height: 380px;
+				border-left:none;
+				/*display: none;
+				*/
+				overflow: scroll;
 			}
+			
 			
 			nav{
 				position:absolute;
@@ -67,6 +70,8 @@
 			}
 		</style>
 		<script src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.20/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollable.js"></script>
 		<script src="js/novo.js"></script>
 	</head>
 	<body>
@@ -114,163 +119,163 @@
 						</div>
 					
 					<!-- Submenu do "Atendimento" -->
-					<div class="top">
-						<div class="filho pai" data-pai="item3" data-nome="filho1">Cliente 01 ></div>
-						<div class="filho pai" data-pai="item3" data-nome="filho2">Cliente 02</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho3">Cliente 01</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho4">Cliente 01</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho5">Cliente 01</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho6">Cliente 01</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho7">Cliente 01</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho8">Cliente 01</div>
+					<div class="top scroll">
 						<div class="filho pai" data-pai="item3" data-nome="filho9">Cliente 01</div>
-						<div class="filho pai" data-pai="item3" data-nome="filho10">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho10">Cliente 02</div>
 						<div class="filho pai" data-pai="item3" data-nome="filho11">Cliente 01</div>
 						<div class="filho pai" data-pai="item3" data-nome="filho12">Cliente 01</div>
 						<div class="filho pai" data-pai="item3" data-nome="filho13">Cliente 01</div>
 						<div class="filho pai" data-pai="item3" data-nome="filho14">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho15">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho16">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho17">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho18">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho19">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho20">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho21">Cliente 01</div>
+						<div class="filho pai" data-pai="item3" data-nome="filho22">Cliente 01</div>
 					</div>
 					
 					<!-- Submenu do "Projetos" -->
 					<div class="top">
-						<div class="filho pai" data-pai="item4" data-nome="filho1">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho2">Projeto 02</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho3">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho4">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho5">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho6">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho7">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho8">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho9">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho10">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho11">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho12">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho13">Projeto 01</div>
-						<div class="filho pai" data-pai="item4" data-nome="filho14">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho23">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho24">Projeto 02</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho25">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho26">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho27">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho28">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho29">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho30">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho31">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho32">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho33">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho34">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho35">Projeto 01</div>
+						<div class="filho pai" data-pai="item4" data-nome="filho36">Projeto 01</div>
 					</div>
 					
 					<!-- Submenu do "Comercial" -->
 					<div class="top">
-						<div class="filho pai" data-pai="item7" data-nome="filho1">Documentos</div>
-						<div class="filho pai" data-pai="item7" data-nome="filho2">Cotações</div>
-						<div class="filho pai" data-pai="item7" data-nome="filho3">Formulários</div>
-						<div class="filho pai" data-pai="item7" data-nome="filho4">Faturas</div>
-						<div class="filho pai" data-pai="item7" data-nome="filho5">Subscrições</div>
+						<div class="filho pai" data-pai="item7" data-nome="filho37">Documentos</div>
+						<div class="filho pai" data-pai="item7" data-nome="filho38">Cotações</div>
+						<div class="filho pai" data-pai="item7" data-nome="filho39">Formulários</div>
+						<div class="filho pai" data-pai="item7" data-nome="filho40">Faturas</div>
+						<div class="filho pai" data-pai="item7" data-nome="filho41">Subscrições</div>
 					</div>
 					
 					<!-- Submenu do "Faturamento" -->
 					<div class="top">
-						<div class="filho pai" data-pai="item8" data-nome="filho1">Faturas</div>
-						<div class="filho pai" data-pai="item8" data-nome="filho2">Contratar</div>
-						<div class="filho pai" data-pai="item8" data-nome="filho3">Solicitar Cancelamento</div>
+						<div class="filho pai" data-pai="item8" data-nome="filho42">Faturas</div>
+						<div class="filho pai" data-pai="item8" data-nome="filho43">Contratar</div>
+						<div class="filho pai" data-pai="item8" data-nome="filho44">Solicitar Cancelamento</div>
 					</div>
 					
 					<!-- Submenu do "Documentos" -->
 					<div class="top">
-						<div class="filho pai" data-pai="item9" data-nome="filho1">Documentos</div>
-						<div class="filho pai" data-pai="item9" data-nome="filho2">Contratos</div>
-						<div class="filho pai" data-pai="item9" data-nome="filho3">Políticas</div>
-						<div class="filho pai" data-pai="item9" data-nome="filho4">Termos de Uso</div>
-						<div class="filho pai" data-pai="item9" data-nome="filho5">Enviar Documento</div>
+						<div class="filho pai" data-pai="item9" data-nome="filho45">Documentos</div>
+						<div class="filho pai" data-pai="item9" data-nome="filho46">Contratos</div>
+						<div class="filho pai" data-pai="item9" data-nome="filho47">Políticas</div>
+						<div class="filho pai" data-pai="item9" data-nome="filho48">Termos de Uso</div>
+						<div class="filho pai" data-pai="item9" data-nome="filho49">Enviar Documento</div>
 					</div>
 					
 					<!-- Submenu do "Interface" -->
 					<div class="top">
-						<div class="filho pai" data-pai="item10" data-nome="filho1">Construtores ></div>
-						<div class="filho pai" data-pai="item10" data-nome="filho2">Elementos ></div>
-						<div class="filho pai" data-pai="item10" data-nome="filho3">Formulários ></div>
-						<div class="filho pai" data-pai="item10" data-nome="filho4">Gráficos</div>
-						<div class="filho pai" data-pai="item10" data-nome="filho5">Mapas ></div>
-						<div class="filho pai" data-pai="item10" data-nome="filho6">Módulos</div>
-						<div class="filho pai" data-pai="item10" data-nome="filho7">Outros ></div>
-						<div class="filho pai" data-pai="item10" data-nome="filho8">Tabelas ></div>
+						<div class="filho pai" data-pai="item10" data-nome="filho50">Construtores ></div>
+						<div class="filho pai" data-pai="item10" data-nome="filho51">Elementos ></div>
+						<div class="filho pai" data-pai="item10" data-nome="filho52">Formulários ></div>
+						<div class="filho pai" data-pai="item10" data-nome="filho53">Gráficos</div>
+						<div class="filho pai" data-pai="item10" data-nome="filho54">Mapas ></div>
+						<div class="filho pai" data-pai="item10" data-nome="filho55">Módulos</div>
+						<div class="filho pai" data-pai="item10" data-nome="filho56">Outros ></div>
+						<div class="filho pai" data-pai="item10" data-nome="filho57">Tabelas ></div>
 					</div>
 						<!-- Neto do Interface, ou seja, submenu do "Construtores" -->
 						<div class="top">
-							<div class="filho" data-pai="filho1">Landingpage</div>
-							<div class="filho" data-pai="filho1">Newsletter</div>
+							<div class="filho" data-pai="filho50">Landingpage</div>
+							<div class="filho" data-pai="filho50">Newsletter</div>
 						</div>
 						<!-- Neto do Interface, ou seja, submenu do "Elementos" -->
 						<div class="top">
-							<div class="filho" data-pai="filho2">Cores</div>
-							<div class="filho" data-pai="filho2">Tipografias</div>
-							<div class="filho" data-pai="filho2">Icones</div>
-							<div class="filho" data-pai="filho2">Botões</div>
-							<div class="filho" data-pai="filho2">Notificações</div>
-							<div class="filho" data-pai="filho2">Modals</div>
-							<div class="filho" data-pai="filho2">Progress & Activity</div>
-							<div class="filho" data-pai="filho2">Tabs & Accordions</div>
-							<div class="filho" data-pai="filho2">Sliders</div>
-							<div class="filho" data-pai="filho2">Tree Views</div>
-							<div class="filho" data-pai="filho2">Nestable</div>
+							<div class="filho" data-pai="filho51">Cores</div>
+							<div class="filho" data-pai="filho51">Tipografias</div>
+							<div class="filho" data-pai="filho51">Icones</div>
+							<div class="filho" data-pai="filho51">Botões</div>
+							<div class="filho" data-pai="filho51">Notificações</div>
+							<div class="filho" data-pai="filho51">Modals</div>
+							<div class="filho" data-pai="filho51">Progress & Activity</div>
+							<div class="filho" data-pai="filho51">Tabs & Accordions</div>
+							<div class="filho" data-pai="filho51">Sliders</div>
+							<div class="filho" data-pai="filho51">Tree Views</div>
+							<div class="filho" data-pai="filho51">Nestable</div>
 						</div>
 						<!-- Neto do Interface, ou seja, submenu do "Formulários" -->
 						<div class="top">
-							<div class="filho" data-pai="filho3">Elementos</div>
-							<div class="filho" data-pai="filho3">Layouts</div>
-							<div class="filho" data-pai="filho3">Wizard</div>
+							<div class="filho" data-pai="filho52">Elementos</div>
+							<div class="filho" data-pai="filho52">Layouts</div>
+							<div class="filho" data-pai="filho52">Wizard</div>
 						</div>
 						<!-- Neto do Interface, ou seja, submenu do "mapas" -->
 						<div class="top">
-							<div class="filho" data-pai="filho5">Google Maps</div>
-							<div class="filho" data-pai="filho5">Vector Maps</div>
+							<div class="filho" data-pai="filho54">Google Maps</div>
+							<div class="filho" data-pai="filho54">Vector Maps</div>
 						</div>
 						<!-- Neto do Interface, ou seja, submenu do "Outros" -->
 						<div class="top">
-							<div class="filho" data-pai="filho7">Fatura</div>
-							<div class="filho" data-pai="filho7">Erro 404 e 500</div>
-							<div class="filho" data-pai="filho7">Página Padrão</div>
-							<div class="filho" data-pai="filho7">Autenticação</div>
-							<div class="filho" data-pai="filho7">Registro</div>
-							<div class="filho" data-pai="filho7">Lockscreen</div>
-							<div class="filho" data-pai="filho7">Galeria</div>
-							<div class="filho" data-pai="filho7">Timeline</div>
+							<div class="filho" data-pai="filho56">Fatura</div>
+							<div class="filho" data-pai="filho56">Erro 404 e 500</div>
+							<div class="filho" data-pai="filho56">Página Padrão</div>
+							<div class="filho" data-pai="filho56">Autenticação</div>
+							<div class="filho" data-pai="filho56">Registro</div>
+							<div class="filho" data-pai="filho56">Lockscreen</div>
+							<div class="filho" data-pai="filho56">Galeria</div>
+							<div class="filho" data-pai="filho56">Timeline</div>
 						</div>
 						<!-- Neto do Interface, ou seja, submenu do "Tabelas" -->
 						<div class="top">
-							<div class="filho" data-pai="filho8">Básico</div>
-							<div class="filho" data-pai="filho8">De Dados</div>
+							<div class="filho" data-pai="filho57">Básico</div>
+							<div class="filho" data-pai="filho57">De Dados</div>
 						</div>
 				<!-- Submenu do "Suporte" -->
 				<div class="top">
-					<div class="filho pai" data-pai="item11" data-nome="filho1">Central de Atendimento</div>
-					<div class="filho pai" data-pai="item11" data-nome="filho2">Solicitar Suporte</div>
-					<div class="filho pai" data-pai="item11" data-nome="filho3">Minhas Dúvidas</div>
-					<div class="filho pai" data-pai="item11" data-nome="filho4">Dar Suporte ></div>
+					<div class="filho pai" data-pai="item11" data-nome="filho58">Central de Atendimento</div>
+					<div class="filho pai" data-pai="item11" data-nome="filho59">Solicitar Suporte</div>
+					<div class="filho pai" data-pai="item11" data-nome="filho60">Minhas Dúvidas</div>
+					<div class="filho pai" data-pai="item11" data-nome="filho61">Dar Suporte ></div>
 				</div>
-						<!-- Neto do Interface, ou seja, submenu do "Dar Suporte" -->
+						<!-- Neto do Suporte, ou seja, submenu do "Dar Suporte" -->
 						<div class="top">
-							<div class="filho" data-pai="filho4">Chamado #01</div>
-							<div class="filho" data-pai="filho4">Chamado #02</div>
-							<div class="filho" data-pai="filho4">Chamado #03</div>
-							<div class="filho" data-pai="filho4">Chamado #04</div>
-							<div class="filho" data-pai="filho4">Chamado #06</div>
-							<div class="filho" data-pai="filho4">Chamado #07</div>
-							<div class="filho" data-pai="filho4">Chamado #08</div>
-							<div class="filho" data-pai="filho4">Chamado #09</div>
-							<div class="filho" data-pai="filho4">Chamado #10</div>
-							<div class="filho" data-pai="filho4">Chamado #11</div>
-							<div class="filho" data-pai="filho4">Chamado #12</div>
-							<div class="filho" data-pai="filho4">Chamado #13</div>
-							<div class="filho" data-pai="filho4">Chamado #14</div>
-							<div class="filho" data-pai="filho4">Chamado #15</div>
-							<div class="filho" data-pai="filho4">Chamado #16</div>								
+							<div class="filho" data-pai="filho61">Chamado #01</div>
+							<div class="filho" data-pai="filho61">Chamado #02</div>
+							<div class="filho" data-pai="filho61">Chamado #03</div>
+							<div class="filho" data-pai="filho61">Chamado #04</div>
+							<div class="filho" data-pai="filho61">Chamado #06</div>
+							<div class="filho" data-pai="filho61">Chamado #07</div>
+							<div class="filho" data-pai="filho61">Chamado #08</div>
+							<div class="filho" data-pai="filho61">Chamado #09</div>
+							<div class="filho" data-pai="filho61">Chamado #10</div>
+							<div class="filho" data-pai="filho61">Chamado #11</div>
+							<div class="filho" data-pai="filho61">Chamado #12</div>
+							<div class="filho" data-pai="filho61">Chamado #13</div>
+							<div class="filho" data-pai="filho61">Chamado #14</div>
+							<div class="filho" data-pai="filho61">Chamado #15</div>
+							<div class="filho" data-pai="filho61">Chamado #16</div>								
 						</div>
 				<!-- Submenu do "Administração" -->
 				<div class="top">
-					<div class="filho pai" data-pai="item12" data-nome="filho1">Central de Administração</div>
-					<div class="filho pai" data-pai="item12" data-nome="filho2">Sistemas ></div>
+					<div class="filho pai" data-pai="item12" data-nome="filho62">Central de Administração</div>
+					<div class="filho pai" data-pai="item12" data-nome="filho63">Sistemas ></div>
 				</div>
-					<!-- Neto do Interface, ou seja, submenu do "Dar Suporte" -->
+					<!-- Neto do Administração, ou seja, submenu do "Sistemas" -->
 						<div class="top">
-							<div class="filho" data-pai="filho2">Jelastic</div>
-							<div class="filho" data-pai="filho2">E-Mail Marketing</div>
-							<div class="filho" data-pai="filho2">E-Mail Profissional</div>
-							<div class="filho" data-pai="filho2">Servidor Hospedagem</div>
-							<div class="filho" data-pai="filho2">Servidor Revenda</div>
-							<div class="filho" data-pai="filho2">Servidor SMTP</div>
-							<div class="filho" data-pai="filho2">Sistema de Redirecionamento</div>
-							<div class="filho" data-pai="filho2">Usuários</div>
+							<div class="filho" data-pai="filho63">Jelastic</div>
+							<div class="filho" data-pai="filho63">E-Mail Marketing</div>
+							<div class="filho" data-pai="filho63">E-Mail Profissional</div>
+							<div class="filho" data-pai="filho63">Servidor Hospedagem</div>
+							<div class="filho" data-pai="filho63">Servidor Revenda</div>
+							<div class="filho" data-pai="filho63">Servidor SMTP</div>
+							<div class="filho" data-pai="filho63">Sistema de Redirecionamento</div>
+							<div class="filho" data-pai="filho63">Usuários</div>
 						</div>
 				
 				</div>

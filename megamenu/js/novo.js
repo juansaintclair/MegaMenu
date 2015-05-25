@@ -5,6 +5,8 @@ var config = {
 };
 
 $(function () {
+	//$('.scroll').scrollable();
+	
 	$('.pai')
 		.mouseenter(function () {
 		ocultaFilhos();
@@ -25,6 +27,13 @@ $(function () {
 	$('.menu').mouseleave(function () {
 		ocultaFilhos();
 	});
+	
+/*	
+	$('.patriarca').mouseover(function() { 
+		console.log('oi');
+		$('.top, .pai, .filho').show(); }).mouseleave(function() { $('.top').hide();
+	 });
+*/
 });
 
 function ocultaFilhos() {
@@ -53,3 +62,4 @@ function exibeHierarquia($item) {
 
 	return largura;
 }
+
