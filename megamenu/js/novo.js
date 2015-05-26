@@ -28,12 +28,6 @@ $(function () {
 		ocultaFilhos();
 	});
 	
-/*	
-	$('.patriarca').mouseover(function() { 
-		console.log('oi');
-		$('.top, .pai, .filho').show(); }).mouseleave(function() { $('.top').hide();
-	 });
-*/
 });
 
 function ocultaFilhos() {
